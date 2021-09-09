@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import kotlinx.android.synthetic.main.content_result.*
 
 class Result : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,5 +20,9 @@ class Result : AppCompatActivity() {
         imageView.setImageBitmap(imageBitmap)
         val textView = findViewById<TextView>(R.id.label)
         textView.text = pred
+
+        backtomain.setOnClickListener {
+            finish()
+        }
     }
 }
